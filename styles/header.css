@@ -1,0 +1,50 @@
+.header {
+  height: 90px;
+  padding-top: 30px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.left-section {
+  display: flex;
+  font-size: 35px;
+  margin-left: 300px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.right-section {
+  display: flex;
+  margin-right: 550px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.button-about,
+.button-experience,
+.button-projects,
+.button-contact {
+  font-size: 28px;
+  height: 50px;
+  align-items: center;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.button-about:hover,
+.button-experience:hover,
+.button-projects:hover,
+.button-contact:hover {
+  text-decoration: underline;
+}
