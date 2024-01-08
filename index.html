@@ -10,26 +10,53 @@
     />
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/general.css" />
-    <link rel="stylesheet" href="styles/hero-section.css" />
-    <link rel="stylesheet" href="styles/about-section.css" />
+    <link rel="stylesheet" href="styles/sections.css" />
+    <link rel="stylesheet" href="styles/mobile.css" />
+    <link rel="stylesheet" href="/styles/mediaqueries.css" />
   </head>
   <body>
-    <header class="header">
+    <nav id="desktop-nav">
       <div class="left-section"><p>Michał Jagodziński</p></div>
-      <div class="right-section">
-        <a href="#hero-section"><button class="home-button">Home</button></a>
-        <a href="#about-section"><button class="button-about">About</button></a>
-        <button class="button-experience">Experience</button>
-        <button class="button-projects">Projects</button>
-        <button class="button-contact">Contact</button>
+      <div>
+        <ul class="right-section">
+          <li><a href="#desktop-nav">Home</a></li>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#experience-section">Experience</a></li>
+          <li><a href="#projects-section">Projects</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+        </ul>
       </div>
-    </header>
-    <section class="hero-section" id="hero-section">
-      <div class="hero-section-grid">
-        <div><img class="hero-section-photo" src="images/myphoto.jpeg" /></div>
+    </nav>
+
+    <nav id="mobile-nav">
+      <div class="left-section"><p>Michał Jagodziński</p></div>
+      <div class="mobile-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#hero-section" onclick="toggleMenu()">Home</a></li>
+          <li><a href="#about-section" onclick="toggleMenu()">About</a></li>
+          <li>
+            <a href="#experience-section" onclick="toggleMenu()">Experience</a>
+          </li>
+          <li>
+            <a href="projects-section" onclick="toggleMenu()">Projects</a>
+          </li>
+          <li><a href="contact-section" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="hero-section">
+      <div class="hero-section-container">
+        <div class="hero-section-photo-container">
+          <img class="hero-section-photo" src="images/myphoto.jpeg" />
+        </div>
         <div class="hero-section-text">
-          <p class="hello">Hello I'm</p>
-          <p class="name">Michał Jagodziński</p>
+          <p class="p1">Hello I'm</p>
+          <h1 class="tittle">Michał Jagodziński</h1>
           <p class="profession">Currently ERP developer</p>
           <p class="page">This is my portfiolo page</p>
           <div class="hero-section-buttons">
@@ -45,23 +72,140 @@
         </div>
       </div>
     </section>
-    <section class="about-section" id="about-section">
-      <div class="about-section-grid">
-        <img class="about-section-photo" src="images/coding.jpg" />
-        <div class="about-section-text">
-          <div class="about-section-header"><p>About Me</p></div>
-          <div class="about-section-description">
-            <p>
-              I am a 21-year-old programmer and a part-time student. My journey
-              in programming began with Java, but now I am working with ERP
-              systems, coding in C#. I am evolving towards becoming a full-stack
-              developer, which is why this page exists. I'm a huge fan of
-              basketball and football. Watching these sports is my greatest
-              hobby, second only to coding.
-            </p>
+    <section id="about-section">
+      <h1 class="tittle">About Me</h1>
+      <div class="about-section-container">
+        <div class="about-section-photo-container">
+          <img class="about-section-photo" src="images/coding.jpg" />
+        </div>
+        <div class="about-details-container">
+          <div class="about-section-containers">
+            <div class="about-section-text-container">
+              <p>
+                I am a 21-year-old programmer and a part-time student. I am
+                studying IT in business at the University of Economics in
+                Wrocław. My journey in programming began with Java, but now I am
+                working with ERP systems, coding in C#. I am evolving towards
+                becoming a full-stack developer, which is why this page exists.
+                I'm a huge fan of basketball and football. Watching these sports
+                is my greatest hobby, second only to coding.
+              </p>
+            </div>
           </div>
         </div>
       </div>
+      <img
+        src="images/arrow.png"
+        class="arrow-icon"
+        onclick="location.href='./#experience-section'"
+      />
     </section>
+    <section id="experience-section">
+      <p class="p1">Get know about my</p>
+      <h1 class="tittle">Experience</h1>
+      <div class="experience-section-details-container">
+        <div class="about-section-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-tittle">Java developer</h2>
+            <p>02.2023-08.2023</p>
+            <p>JFeeSoft</p>
+            <div class="article-container">
+              <article>
+                Working in the Team of 10 members in the Agileframework,
+                responsible for delivery of the R&Dcloud-based application.
+                Working withmicroservice architecture based on REST back-end
+                services. Developing with technologies asfollowing: REST
+                Template, Docker, CircleCI,PostgreSQL, lombok, log4j, SpringBoot
+                Core,SpringBoot Data JPA, AOP, JWT, Keykloack,JUnit/Karate,
+                Monitorig with grafana andprometheus actuator, Tomcat. Handling
+                on-boarding process of the new joiners and sharingexpertise to
+                other Team Members by organizingand leading KT/brainstorming
+                sessions. Assistingin tasks refinement by adding priority,
+                estimatingcomplexity and assigning labels. Making codereview,
+                functional and API documentation. Worksgreat in Git/GitHub
+                environment
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-tittle">ERP developer</h2>
+            <p>08.2023-NOW</p>
+            <p>DPS-Systems</p>
+            <div class="article-container">
+              <article>
+                Working in the team of 20 people. We working on develop some
+                products for ERP systems and modifications or service where we
+                allready implemented system. I am working on Enova365 system. We
+                developing this geenraly in c#. I am learning here hwo to work
+                in such a big team, how to work with te time preasure and how to
+                talk with people who is implementers the system but no
+                programers.
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="images/arrow.png"
+        class="arrow-icon"
+        onclick="location.href='./#projects-section'"
+      />
+    </section>
+    <section id="projects-section">
+      <p class="p1">This Is My Recent</p>
+      <h1 class="tittle">Projects</h1>
+      <div class="experience-section-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class=".article-container"></div>
+            <img class="project-photo" src="images/project.jpg" />
+            <h2 class="experience-sub-tittle project-tittle">
+              My Portfolio Page
+            </h2>
+            <div class="button-container"></div>
+            <button
+              class="button-project"
+              onclick="location.href='https://github.com/MichalJagodzinski/Portfolio-Page'"
+            >
+              GitHub
+            </button>
+          </div>
+        </div>
+      </div>
+      <img
+        src="images/arrow.png"
+        class="arrow-icon"
+        onclick="location.href='./#contact-section'"
+      />
+    </section>
+    <section id="contact-section">
+      <p class="p1">Let's Get In Touch</p>
+      <h1 class="tittle">Contact Me</h1>
+      <div class="contact-info-top-container">
+        <div class="contact-info-container">
+          <img class="icon contact-icon" src="images/email.png" />
+          <p>
+            <a href="mailto:mjagodzinski53@gmail.com"
+              >mjagodzinski53@gmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="right-section">
+            <li><a href="#desktop-nav">Home</a></li>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#experience-section">Experience</a></li>
+            <li><a href="#projects-section">Projects</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; Michał Jagodziński</p>
+    </footer>
+    <script defer src="script.js"></script>
   </body>
 </html>
