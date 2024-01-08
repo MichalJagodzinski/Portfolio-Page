@@ -1,10 +1,10 @@
 .header {
   height: 90px;
-  padding-top: 30px;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: rgb(255, 253, 208);
 
   position: fixed;
   top: 0;
@@ -19,6 +19,7 @@
   margin-left: 300px;
   align-items: center;
   white-space: nowrap;
+  color: black;
 }
 
 .right-section {
@@ -26,25 +27,29 @@
   margin-right: 300px;
   align-items: center;
   white-space: nowrap;
+  color: white;
 }
 
 .button-about,
 .button-experience,
 .button-projects,
-.button-contact {
+.button-contact,
+.home-button {
   font-size: 28px;
   height: 50px;
   align-items: center;
   border: none;
-  background-color: white;
+  background-color: rgb(255, 253, 208);
   cursor: pointer;
   padding-left: 15px;
   padding-right: 15px;
+  color: black;
 }
 
 .button-about:hover,
 .button-experience:hover,
 .button-projects:hover,
-.button-contact:hover {
+.button-contact:hover,
+.home-button:hover {
   text-decoration: underline;
 }

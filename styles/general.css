@@ -1,3 +1,7 @@
 body {
+  background-color: rgb(255, 253, 208);
   font-family: Roboto, Arial;
+}
+html {
+  scroll-behavior: smooth;
 }

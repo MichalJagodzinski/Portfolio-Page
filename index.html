@@ -11,24 +11,26 @@
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/general.css" />
     <link rel="stylesheet" href="styles/hero-section.css" />
+    <link rel="stylesheet" href="styles/about-section.css" />
   </head>
   <body>
     <header class="header">
       <div class="left-section"><p>Michał Jagodziński</p></div>
       <div class="right-section">
-        <button class="button-about">About</button>
+        <a href="#hero-section"><button class="home-button">Home</button></a>
+        <a href="#about-section"><button class="button-about">About</button></a>
         <button class="button-experience">Experience</button>
         <button class="button-projects">Projects</button>
         <button class="button-contact">Contact</button>
       </div>
     </header>
-    <section class="hero-section">
+    <section class="hero-section" id="hero-section">
       <div class="hero-section-grid">
         <div><img class="hero-section-photo" src="images/myphoto.jpeg" /></div>
         <div class="hero-section-text">
           <p class="hello">Hello I'm</p>
           <p class="name">Michał Jagodziński</p>
-          <p class="profession">Full Stack Developer</p>
+          <p class="profession">Currently ERP developer</p>
           <p class="page">This is my portfiolo page</p>
           <div class="hero-section-buttons">
             <a href="CV.pdf" download
@@ -39,6 +41,24 @@
               target="_blank"
               ><button class="linkedin-button">LinkedIn</button></a
             >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-section" id="about-section">
+      <div class="about-section-grid">
+        <img class="about-section-photo" src="images/coding.jpg" />
+        <div class="about-section-text">
+          <div class="about-section-header"><p>About Me</p></div>
+          <div class="about-section-description">
+            <p>
+              I am a 21-year-old programmer and a part-time student. My journey
+              in programming began with Java, but now I am working with ERP
+              systems, coding in C#. I am evolving towards becoming a full-stack
+              developer, which is why this page exists. I'm a huge fan of
+              basketball and football. Watching these sports is my greatest
+              hobby, second only to coding.
+            </p>
           </div>
         </div>
       </div>
